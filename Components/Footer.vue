@@ -30,19 +30,13 @@
 </template>
 
 <style lang="scss" >
+
+
+
 h1,h2{
-//font-family: Georgia, 'Times New Roman', Times, serif;
 font-family: 'Righteous', cursive;
 }
-.footer__w__secondContainer:after{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background-color: transparent;
-}
+
 .footer{
     background-color: rgb(255, 196, 0);
     color:rgb(255, 55, 0);
@@ -51,6 +45,7 @@ font-family: 'Righteous', cursive;
     &__w{
         display:grid;
         grid-template-columns: 50% 50%;
+        //display:flex;
         justify-content: space-between;
       &__container{
              &__nav{
@@ -64,25 +59,52 @@ font-family: 'Righteous', cursive;
                      color:rgb(255, 55, 0);
 
                             }
-                                }
+                            &__link:hover{
+                     background-color:black;
 
+                               }
+                        }
+                        }
                                 }
                     }
-                }
+
+                
 
      &__secondContainer{
         position: relative;
+        display: inline-block;
+        background: transparent;
+        width: 1200px;
         
     &__img{
         max-width:20%;
         // pour enlever la couleur d'arriére plan
-        background :transparent;
         background-image: none;
-        background-image: rgb(255, 55, 0);
-
+    }
+    &__img::after{
+        content:"";
+        display: block;
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        mix-blend-mode: screen;
+        background-color: transparent;
     }
    }
 }
+}
+
+
+@media(max-width:520px)
+{
+    .footer
+    {
+        background-color: yellow;
+        font-size: larger;
+        
+    }
 }
 
 

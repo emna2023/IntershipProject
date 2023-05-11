@@ -21,7 +21,7 @@
     <script setup>
     
 </script>
-<style lang="scss" >
+<style scoped lang="scss" >
 .header{
     background-color: rgb(255, 196, 0);
     color:rgb(255, 55, 0);
@@ -49,10 +49,57 @@ text-align: center;
                 text-decoration: none;
                 color:rgb(255, 55, 0);
             }
+            //pourquoi le hover ne fonctionne pas
+            &__link:hover{
+            color:antiquewhite;
+           }
         }
 
     }
    }
 
 }
+@media(max-width:520px)
+{
+    .header
+    {
+        &__subtitle{
+    font-size: 20px;
+        }
+        &__nav{
+     &__list{
+        display:block;
+        
+    }
+}
+}
+}
+@media(min-width:1000px)
+{
+    .header
+    {
+
+        &__title{
+       font-size:3em;
+   }
+   
+   &__subtitle{
+    font-size:2em;
+   }
+
+        &__nav{
+    &__list{
+        justify-content: space-between;
+        &__onelist{
+            &__link{
+                font-size: 2em;
+
+            }
+        }
+    }
+}
+       
+}
+}
+
 </style>
