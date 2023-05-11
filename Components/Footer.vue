@@ -30,9 +30,6 @@
 </template>
 
 <style lang="scss" >
-
-
-
 h1,h2{
 font-family: 'Righteous', cursive;
 }
@@ -68,9 +65,7 @@ font-family: 'Righteous', cursive;
                                 }
                     }
 
-                
-
-     &__secondContainer{
+    &__secondContainer{
         position: relative;
         display: inline-block;
         background: transparent;
@@ -80,6 +75,7 @@ font-family: 'Righteous', cursive;
         max-width:20%;
         // pour enlever la couleur d'arriére plan
         background-image: none;
+        //opacity:0;
     }
     &__img::after{
         content:"";
@@ -95,17 +91,34 @@ font-family: 'Righteous', cursive;
    }
 }
 }
-
-
 @media(max-width:520px)
 {
     .footer
     {
-        background-color: yellow;
         font-size: larger;
         
     }
 }
 
+@media(min-width:1000px)
+{
+   .footer{
+    &__title{
+        font-size: 4em;
+    }
+   &__w{
+        &__container{
+             &__nav{
+                &__list{
+                   &__onelist{
+                      &__link{
 
+                       font-size: 20px;
+                      }
+                    }
+                }
+            }
+        }
+    }
+}}
 </style>
