@@ -36,6 +36,8 @@
 <style lang="scss">
 
 .main{
+    margin-right: 0;
+    margin-left: 0;
     &__title
     {
         text-align: center;
@@ -48,7 +50,8 @@
                 font-weight: bold;
                 size:80px;
                 //position du texte au début du zone de texte ne fonctionne pas
-                align-content: flex-start;
+                text-align: center;
+                
 
             }
             &__textarea{

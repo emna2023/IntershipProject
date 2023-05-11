@@ -1,5 +1,5 @@
 <template>
-    <main class="main">
+<main class="main">
 <h1 class="main__title">A PROPOS</h1>
 <div class="main__imgContainer">
             <img class="main__imgContainer__img" alt="img1" src="/Media/4screenshot.jpg" />
@@ -17,15 +17,18 @@ Aliquam ut tortor suscipit, mattis lorem at, pharetra dui. Ut semper diam augue,
 </template>
 <script setup>
 </script>
-<style lang="scss">
-.main__imgContainer:hover{
-    transform:translateY(10px);
+<style scoped lang="scss">
+// .main__imgContainer:hover{
+//     transform:translateY(10px);
 
-}
+// }
 
 .main{
+    margin-right: 0;
+    margin-left: 0;
     &__title{
         size: 60px;
+        padding-left:30px;
         text-align: left;
         font-family: Georgia, 'Times New Roman', Times, serif;
         // le padding n'a pas fonctionner
@@ -41,6 +44,10 @@ Aliquam ut tortor suscipit, mattis lorem at, pharetra dui. Ut semper diam augue,
             width:100%;
             
           }
+        }
+        &__subTitle{
+            padding-left: 40px;
+            padding-right: 30px;
         }
     }
 </style>

@@ -12,8 +12,8 @@
             <img class="main__imgContainer__img" alt="img" src="/Media/DENJI.png"/>
       </div>
       <div class="main__arraws">
-            <img alt="arrawBack" src="/Media/arrow_back.png"/>
-            <img alt="arrawNext" src="/Media/arrow_follow.png">
+            <img class="main__arraws__img" alt="arrawBack" src="/Media/arrow_back.png"/>
+            <img class="main__arraws__img" alt="arrawNext" src="/Media/arrow_follow.png">
         </div>
 
 
@@ -23,8 +23,10 @@
 <script setup>
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .main{
+    margin-right: 0;
+    margin-left: 0;
 
     &__imgContainer{
         position:relative;
@@ -36,13 +38,18 @@ width:100%;
         &__title1{
             position:absolute;
             text-align:left;
+            margin-left: 30px;
+            font-size: 50px;
             color:white;
             font-family: Georgia, 'Times New Roman', Times, serif;
 
         }
         &__title2{
             position:absolute;
-            text-align:right;
+            right:30px;
+            //text-align:right;
+           // margin-right: 30px;
+            font-size: 50px;
             color:white;
             font-family: Georgia, 'Times New Roman', Times, serif;
 
@@ -53,6 +60,9 @@ width:100%;
         display:flex;
         justify-content: center;
         align-content: space-around;
+    }
+    &__img{
+        //color:yellow;
     }
 }
 </style>

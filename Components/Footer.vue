@@ -38,8 +38,10 @@ font-family: 'Righteous', cursive;
     background-color: rgb(255, 196, 0);
     color:rgb(255, 55, 0);
     font-weight:bold;
-    padding-bottom: 2em;
-    &__w{
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+        &__w{
         display:grid;
         grid-template-columns: 50% 50%;
         //display:flex;

@@ -27,6 +27,9 @@
     color:rgb(255, 55, 0);
     font-weight:bold;
     padding-bottom: 2em;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
 
 
    &__title{
@@ -78,9 +81,12 @@ text-align: center;
 {
     .header
     {
+        margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
 
-        &__title{
-       font-size:3em;
+    &__title{
+    font-size:3em;
    }
    
    &__subtitle{
