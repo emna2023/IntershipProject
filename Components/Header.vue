@@ -9,7 +9,7 @@
             <li class="header__nav__list__onelist"> 
                 <NuxtLink class="header__nav__list__onelist__link" to="/apropos"> Apropos</NuxtLink></li>
             <li class="header__nav__list__onelist">
-                <NuxtLink class="header__nav__list__onelist__link" to="/contact"> contact</NuxtLink></li>
+                <NuxtLink class="header__nav__list__onelist__link" to="/contact"> Contact</NuxtLink></li>
             <li class="header__nav__list__onelist">
                 <NuxtLink class="header__nav__list__onelist__link" to="/episodes"> Listes des episodes</NuxtLink></li>
             <li class="header__nav__list__onelist">
@@ -52,7 +52,6 @@ text-align: center;
                 text-decoration: none;
                 color:rgb(255, 55, 0);
             }
-            //pourquoi le hover ne fonctionne pas
             &__link:hover{
             color:antiquewhite;
            }

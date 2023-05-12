@@ -66,7 +66,7 @@ ul{
 }
         &__secondcontainer{
              margin-left:30px;
-             margin-bottom: 150px;
+             margin-bottom: 250px;
              width:90%;
              height: 500px;
              overflow:visible;
@@ -75,6 +75,7 @@ ul{
             position:relative;
             &__subtitle{
                 color:white;
+                padding-left: 5px;
             }
             &__title{
               font-size: 4em;

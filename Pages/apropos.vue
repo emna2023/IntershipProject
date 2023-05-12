@@ -18,21 +18,18 @@ Aliquam ut tortor suscipit, mattis lorem at, pharetra dui. Ut semper diam augue,
 <script setup>
 </script>
 <style scoped lang="scss">
-// .main__imgContainer:hover{
-//     transform:translateY(10px);
 
-// }
 
 .main{
     margin-right: 0;
     margin-left: 0;
     &__title{
         size: 60px;
-        padding-left:30px;
         text-align: left;
+        padding-left:30px;
+
         font-family: Georgia, 'Times New Roman', Times, serif;
-        // le padding n'a pas fonctionner
-        //padding-left: 1em;
+        
     }
     &__imgContainer{
         background-image: "/Media/4screenshot.jpg" ;

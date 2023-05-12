@@ -13,7 +13,7 @@
             <li class="footer__w__container__nav__list__onelist"> 
                 <NuxtLink class="footer__w__container__nav__list__onelist__link" to="/apropos"> Apropos</NuxtLink></li>
             <li class="footer__w__container__nav__list__onelist">
-                <NuxtLink class="footer__w__container__nav__list__onelist__link" to="/contact"> contact</NuxtLink></li>
+                <NuxtLink class="footer__w__container__nav__list__onelist__link" to="/contact"> Contact</NuxtLink></li>
             <li class="footer__w__container__nav__list__onelist">
                 <NuxtLink class="footer__w__container__nav__list__onelist__link" to="/episodes"> Listes des episodes</NuxtLink></li>
             <li class="footer__w__container__nav__list__onelist">
