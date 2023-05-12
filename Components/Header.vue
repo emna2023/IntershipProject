@@ -26,6 +26,7 @@
     background-color: rgb(255, 196, 0);
     color:rgb(255, 55, 0);
     font-weight:bold;
+    padding-top: 0;
     padding-bottom: 2em;
     margin-top: 0;
     margin-right: 0;
@@ -42,9 +43,10 @@ text-align: center;
     text-align: center;
    }
    &__nav{
+    margin-right: 20px;
     &__list{
         display:flex;
-        justify-content: space-around;
+        justify-content: space-between;
         list-style: none;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         &__onelist{

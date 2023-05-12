@@ -7,17 +7,17 @@
 </div>
     <form class="main__form" method="post" action="">
     <p class="main__form__p">
-    <label class="main__form__p__label"> E-mail:</label> 
-    <input class="main__form__p__input"   type="text" name="mail" />
+    <label class="main__form__p__label">   E-mail:   </label> 
+    <input class="main__form__p__input"   type="email" name="mail"  size="43"/>
     </p>
 
     <p class="main__form__p">
     <label class="main__form__p__label">Message:</label> 
-    <textarea class="main__form__p__textarea" name="ameliorer" id="ameliorer" rows="8" > </textarea>
+    <textarea class="main__form__p__textarea" name="ameliorer" id="ameliorer"  rows="10" cols="40" > </textarea>
      </p>
 
      <p class="main__form__p">
-    <input class="main__form__p__submit" type="submit" value="Envoyer" />   
+    <input class="main__form__p__submit" type="submit" value="ENVOYER" />   
      </p>
 
     
@@ -41,6 +41,7 @@
     {
         text-align: center;
         font-size: 4em;
+        font-weight: bold;
     }
     &__imgContainer
     {
@@ -65,15 +66,23 @@
             }
             &__textarea{
                 background-color:  rgb(255, 196, 0);
+                border-color:  rgb(255, 196, 0);
+
 
             }
             &__input{
                 background-color:  rgb(255, 196, 0);
+                border-color:  rgb(255, 196, 0);
+
 
             }
             &__submit{
-                color: rgb(255, 119, 0);
-                font-weight: bolder;
+                color:rgb(255, 55, 0);
+                font-weight: bold;
+                font-size: 30px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                border: none;
+                background-color: transparent;
             }
 
         }

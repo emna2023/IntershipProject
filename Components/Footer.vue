@@ -22,9 +22,11 @@
     </nav>
 </div>
     <div class="footer__w__secondContainer">
-        <img class="footer__w__secondContainer__img" alt="img1" src="../public/Media/3wp9532701.jpeg"/>
+        <!-- <img class="footer__w__secondContainer__img" alt="img1" src="../public/Media/3wp9532701.jpeg"/> -->
     </div>
+
 </div>
+
 
 </footer>
 </template>
@@ -32,6 +34,7 @@
 <style lang="scss" >
 h1,h2{
 font-family: 'Righteous', cursive;
+
 }
 
 .footer{
@@ -41,18 +44,23 @@ font-family: 'Righteous', cursive;
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
+       &__title{
+        padding-left: 30px;
+       }
         &__w{
         display:grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 70% 30%;
         //display:flex;
         justify-content: space-between;
       &__container{
              &__nav{
                 &__list{
                   display:block;
+
                      list-style: none;
                      text-decoration: none;
                     &__onelist{
+                        margin-bottom: 5px;
                       &__link{
                       text-decoration: none;
                      color:rgb(255, 55, 0);
@@ -68,31 +76,45 @@ font-family: 'Righteous', cursive;
                     }
 
     &__secondContainer{
-        position: relative;
-        display: inline-block;
-        background: transparent;
-        width: 1200px;
         
-    &__img{
-        max-width:20%;
-        // pour enlever la couleur d'arriére plan
-        background-image: none;
-        //opacity:0;
+        width: 250px;
+        height: 180px;
+        background-image: url("/Media/3wp9532701.jpeg");
+        background-size: cover;
+        //mix-blend-mode: overlay;
+        //isolation: isolate;
+
+        //background-color: transparent;
+       // background-color: rgb(255, 196, 0);
+
+
+
+
+        
+    // &__img{
+    //     max-width:50%;
+    //     position: relative;
+    //     isolation: isolate;
+
+
+        //position: absolute;
+
+        
     }
-    &__img::after{
-        content:"";
-        display: block;
-        position: absolute;
-        top:0;
-        left:0;
-        width:100%;
-        height:100%;
-        mix-blend-mode: screen;
-        background-color: transparent;
-    }
+    // &__img::after{
+    //     content:"";
+    //     display: block;
+    //     position: absolute;
+    //     top:0;
+    //     left:0;
+    //     width:100%;
+    //     height:100%;
+    //     mix-blend-mode: screen;
+    //     background-color: transparent;
+    // }
    }
 }
-}
+
 @media(max-width:520px)
 {
     .footer
