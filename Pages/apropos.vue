@@ -2,7 +2,6 @@
 <main class="main">
 <h1 class="main__title">A PROPOS</h1>
 <div class="main__imgContainer">
-            <img class="main__imgContainer__img" alt="img1" src="/Media/4screenshot.jpg" />
 
         </div>
 
@@ -32,16 +31,14 @@ Aliquam ut tortor suscipit, mattis lorem at, pharetra dui. Ut semper diam augue,
         
     }
     &__imgContainer{
-        background-image: "/Media/4screenshot.jpg" ;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        transition: transform ease-out 0.2s;
-        &__img{
-            width:100%;
-            
-          }
-        }
+        background-image: url("/Media/4screenshot.jpg") ;
+        background-attachment: fixed; /* Fixe l'image pendant le scroll */
+        background-size: cover; /* L'image prendra 100% de l'espace, quitte à la crop */
+        background-position: center; /* Centre la position de l'image */
+        background-repeat: no-repeat; /* Empêche l'image de se répéter en fonction de la taille d'écran */
+        height: 800px; /* On fixe une grande hauteur pour voir plus facilement le scroll */
+        
+         }
         &__subTitle{
             padding-left: 40px;
             padding-right: 30px;

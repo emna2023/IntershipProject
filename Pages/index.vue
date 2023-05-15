@@ -31,6 +31,16 @@
     </main>
 </template>
 <script setup>
+const carousels = [
+    {
+        img: '/Media/image1.jpg',
+        href: "#"
+    },
+    {
+        img: '/Media/image2.jpg',
+        href: "#"
+    },
+    ];
 
 // document.body.onload=function(){
 //     nbr=2;
@@ -50,14 +60,6 @@
 </script>
 
 <style lang="scss">
- .img{
-            width: 100%;
-            height: 400px;
-            margin:0;
-            display: inline-block;
-           object-fit: cover;
-        }
-
 ul{
     display: grid;
     grid-template-columns: 70% 30%;
@@ -65,31 +67,28 @@ ul{
 }
 
 .main{
-  //width: 100%;
-  //height: 100%;
+  
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
 
    &__carroussel{
     width:100%;
-    height:400px;
+    height:600px;
     border: solid;
     overflow:hidden;
     position:relative;
 
     //pour fixer le cadre de la carroussel
     &__container{
-    //display:flex;
     width:100%;
-    height:400px;
-    //position:relative;
+    height:600px;
     &__img{
             width: 100%;
-            height: 400px;
+            height: 600px;
             margin:0;
             display: inline-block;
-           object-fit: cover;
+             object-fit: cover;
         }
 
        
@@ -99,7 +98,7 @@ ul{
         position:absolute;
         width:70px;
         cursor: pointer;
-        top:150px;
+        top:230px;
         left:0;
     }
     &__buttonR
@@ -107,7 +106,7 @@ ul{
         position:absolute;
         width:70px;
         cursor: pointer;
-        top:150px;
+        top:230px;
         right:0;
     }
 }

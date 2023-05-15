@@ -3,7 +3,7 @@
 <main class="main">
 <h1 class="main__title">  NOUS CONTACTER</h1>
 <div class="main__imgContainer">
-            <img class="main__imgContainer__img" alt="img1" src="/Media/CONTACTChainsawman.jpg" />
+            <!-- <img class="main__imgContainer__img" alt="img1" src="/Media/CONTACTChainsawman.jpg" /> -->
 </div>
     <form class="main__form" method="post" action="">
     <p class="main__form__p">
@@ -45,9 +45,15 @@
     }
     &__imgContainer
     {
-        &__img{
-            width:100%;
-        }
+        
+        background-image: url("/Media/CONTACTChainsawman.jpg") ;
+        background-attachment: fixed; /* Fixe l'image pendant le scroll */
+        background-size: cover; /* L'image prendra 100% de l'espace, quitte à la crop */
+        background-position: center; /* Centre la position de l'image */
+        background-repeat: no-repeat; /* Empêche l'image de se répéter en fonction de la taille d'écran */
+        height: 800px; /* On fixe une grande hauteur pour voir plus facilement le scroll */
+        
+         
     }
 
     &__form{

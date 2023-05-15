@@ -1,7 +1,6 @@
 <template>
 <div class="container">
     <p>Le code de l'erreur est: {{ error.statusCode }}</p>
-    
     <p>Oups</p>
     <p>{{ error.message }}</p>
 </div>
