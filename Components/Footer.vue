@@ -81,11 +81,8 @@ font-family: 'Righteous', cursive;
         height: 180px;
         background-image: url("/Media/3wp9532701.jpeg");
         background-size: cover;
-        //mix-blend-mode: overlay;
-        //isolation: isolate;
+        mix-blend-mode: multiply;
 
-        //background-color: transparent;
-       // background-color: rgb(255, 196, 0);
 
 
 
