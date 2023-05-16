@@ -3,13 +3,15 @@
 
 <div class="main__carroussel"> 
         <div class="main__carroussel__container" id="container">
-             <img class="main__carroussel__container__img" alt="img1" src="../public/Media/image1.jpg" /> 
+             <div class="main__carroussel__container__img1"></div>
+             <div class="main__carroussel__container__img2"></div>
+
+
         </div>
         <img class="main__carroussel__buttonL" id="laft" alt="bt1" src="../public/Media/arrow_back_ios.png" />
         <img class="main__carroussel__buttonR" id="right" alt="bt2" src="../public/Media/arrow_forward_ios.png" />
 
-
-        
+<!-- //voir ce site pour carrousel https://codepen.io/januaryofmine/pen/wbOqEm -->
 
 </div>
 
@@ -42,21 +44,7 @@ const carousels = [
     },
     ];
 
-// document.body.onload=function(){
-//     nbr=2;
-//     container=document.getElementById("container");
 
-//     for (i=1;i<=nbr;i++)
-//     {
-//         div=document.createElement("div");
-//         div.className="img";
-//         div.style.backgroundimage="url('/Media/image"+i+".jpg')";
-//         container.appendChild(div);
-
-//     }
-//     g=document.getElementById("left");
-//     //document.getElementById("right").onclick(function(),)
-// }
 </script>
 
 <style lang="scss">
@@ -83,7 +71,19 @@ ul{
     &__container{
     width:100%;
     height:600px;
-    &__img{
+    background-position: center;
+
+    &__img1{
+            width: 100%;
+            height: 600px;
+            margin:0;
+            display: inline-block;
+             object-fit: cover;
+             background-image: url("/Media/image1.jpg") ;
+
+        }
+        &__img2{
+            background-image: url("/Media/image2.jpg") ;
             width: 100%;
             height: 600px;
             margin:0;

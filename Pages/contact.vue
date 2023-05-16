@@ -8,7 +8,7 @@
     <form class="main__form" method="post" action="">
     <p class="main__form__p">
     <label class="main__form__p__label">   E-mail:   </label> 
-    <input class="main__form__p__input"   type="email" name="mail"  size="43"/>
+    <input class="main__form__p__input"  id="mail"  type="email" name="mail"  size="43"/>
     </p>
 
     <p class="main__form__p">
@@ -17,7 +17,7 @@
      </p>
 
      <p class="main__form__p">
-    <input class="main__form__p__submit" type="submit" value="ENVOYER" />   
+    <input class="main__form__p__submit" id="envoyer" type="submit" value="ENVOYER" />   
      </p>
 
     
@@ -30,6 +30,28 @@
     </main>
 </template>
 <script setup>
+
+//  document.getElementById('envoyer').addEventListener("click",() =>
+//  {
+// const x=document.getElementById("mail").value;
+// console.log("le mail tapé est" + x);
+//  });
+
+ import { Buffer } from "buffer";
+const username = "admin";// choisis par vous même-postman
+const password = "admin";
+const { data: myData } = await useFetch("http://localhost:8081/Plone/nous-contacter", {
+  headers: {
+    Accept: "application/json",
+    Authorization:
+      "Basic " + Buffer.from(username + ":" + password).toString("base64"),
+  },
+});
+
+console.log("Affichage de l'api:" + myData.value);
+console.log(` les ids: ${myData["id"]} `);
+
+
 </script>
 
 <style lang="scss">
