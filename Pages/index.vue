@@ -4,11 +4,13 @@
 <div class="main__carroussel"> 
         <div class="main__carroussel__container" id="container">
              <div class="main__carroussel__container__img1"></div>
-             <div class="main__carroussel__container__img2"></div>
+        <img class="main__carroussel__buttonL" id="img" alt="imgcarrousel" src="/Media/image1.jpg" />
+             <!-- <img class="main__carroussel__container__img1 src=""></div> -->
 
-
+             <!-- <div class="main__carroussel__container__img2"></div> -->
         </div>
-        <img class="main__carroussel__buttonL" id="laft" alt="bt1" src="../public/Media/arrow_back_ios.png" />
+
+        <img class="main__carroussel__buttonL" id="left" alt="bt1" src="../public/Media/arrow_back_ios.png" />
         <img class="main__carroussel__buttonR" id="right" alt="bt2" src="../public/Media/arrow_forward_ios.png" />
 
 <!-- //voir ce site pour carrousel https://codepen.io/januaryofmine/pen/wbOqEm -->
@@ -33,6 +35,8 @@
     </main>
 </template>
 <script setup>
+
+// document.getElementById("left").addEventListener((),)
 const carousels = [
     {
         img: '/Media/image1.jpg',

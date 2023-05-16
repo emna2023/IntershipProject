@@ -1,23 +1,26 @@
 <template>
-    <main>
+   
 <main class="main">
-<h1 class="main__title">  NOUS CONTACTER</h1>
+<!-- <h1 class="main__title">  NOUS CONTACTER</h1> -->
+
+<h1 class="main__title">{{ myData.id }} </h1>
+
 <div class="main__imgContainer">
             <!-- <img class="main__imgContainer__img" alt="img1" src="/Media/CONTACTChainsawman.jpg" /> -->
 </div>
-    <form class="main__form" method="post" action="">
+    <form @submit.prevent="sendEmail" class="main__form" method="post" action="">
     <p class="main__form__p">
     <label class="main__form__p__label">   E-mail:   </label> 
     <input class="main__form__p__input"  id="mail"  type="email" name="mail"  size="43"/>
     </p>
 
     <p class="main__form__p">
-    <label class="main__form__p__label">Message:</label> 
+    <label id="msg" class="main__form__p__label">Message:</label> 
     <textarea class="main__form__p__textarea" name="ameliorer" id="ameliorer"  rows="10" cols="40" > </textarea>
      </p>
 
      <p class="main__form__p">
-    <input class="main__form__p__submit" id="envoyer" type="submit" value="ENVOYER" />   
+    <button class="main__form__p__submit" id="envoyer" type="submit">Envoyer</button>  
      </p>
 
     
@@ -27,29 +30,33 @@
 
 
 </main>
-    </main>
+
 </template>
-<script setup>
+<script lang="ts" setup>
+import {Buffer} from 'buffer';
+ 
+ const config = useRuntimeConfig();
+ //aller a nuxt.config.ts
+ const { data: myData } = await useFetch("nous-contacter", {
+   baseURL: config.public.apiBase,
+   headers: {
+     Accept: "application/json",
+     Authorization:
+       "Basic " +
+       Buffer.from("admin" + ":" + config.apiSecret).toString("base64"),
+   },
+ });
+ console.log(myData.value);
 
-//  document.getElementById('envoyer').addEventListener("click",() =>
-//  {
-// const x=document.getElementById("mail").value;
-// console.log("le mail tapé est" + x);
-//  });
+function sendEmail() {
 
- import { Buffer } from "buffer";
-const username = "admin";// choisis par vous même-postman
-const password = "admin";
-const { data: myData } = await useFetch("http://localhost:8081/Plone/nous-contacter", {
-  headers: {
-    Accept: "application/json",
-    Authorization:
-      "Basic " + Buffer.from(username + ":" + password).toString("base64"),
-  },
-});
+const mailaddress = document.getElementById("mail").value;
+console.log("le mail tapé est" + mailaddress);
+document.getElementById("msg").innerHTML = "Write your message";
+ };
 
-console.log("Affichage de l'api:" + myData.value);
-console.log(` les ids: ${myData["id"]} `);
+
+
 
 
 </script>
@@ -64,6 +71,7 @@ console.log(` les ids: ${myData["id"]} `);
         text-align: center;
         font-size: 4em;
         font-weight: bold;
+        text-transform: uppercase;
     }
     &__imgContainer
     {
