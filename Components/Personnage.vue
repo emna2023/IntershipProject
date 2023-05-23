@@ -4,8 +4,6 @@
        <img class="imgContainer__img" alt="img" :src="img"/>
       </div>
 </template>
-
-
       <script lang="ts" setup>
        const props = defineProps({
         title: String,
@@ -13,14 +11,11 @@
     });
       </script>
 
-
       <style scoped lang="scss">
        .imgContainer{
         position:relative;
-
         &__img{
-width:100%;
-
+        width:100%;
         }
         &__title1{
             position:absolute;
@@ -29,6 +24,6 @@ width:100%;
             font-size: 50px;
             color:white;
             font-family: Georgia, 'Times New Roman';
-    
-        }}
+            }
+          }
             </style>

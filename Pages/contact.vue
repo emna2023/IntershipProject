@@ -10,7 +10,6 @@
 </div>
 
     <form @submit.prevent="sendEmail" class="main__form" method="post" action="">
-
     <p class="main__form__p">
     <label class="main__form__p__label">   E-mail:   </label> 
     <input class="main__form__p__input"  id="mail"  type="email" name="mail"  size="43"/>
@@ -21,11 +20,9 @@
     <textarea class="main__form__p__textarea" name="ameliorer" id="ameliorer"  rows="10" cols="40" > </textarea>
      </p>
 
-     <p class="main__form__p">
+    <p class="main__form__p">
     <button class="main__form__p__submit" id="envoyer" type="submit">Envoyer</button>  
-     </p>
-
-    
+    </p>
 </form>
 </main>
 
@@ -46,13 +43,41 @@ import {Buffer} from 'buffer';
  });
  console.log("c'est l'api:" + myData.value);
 
-function sendEmail() {
+ async function sendEmail() {
 
-const mailaddress = document.getElementById("mail").value;
-console.log("le mail tapé est" + mailaddress);
-document.getElementById("msg").innerHTML = "Write your message";
+    const mailAddress = document.getElementById("mail").value;
+
+    console.log("le mail tapé est" + mailAddress);
+    //document.getElementById("msg").innerHTML = "Write your message";
+    const des = document.querySelector('textarea').value;
+    console.log("la  description est: " + des);
+
+
+    try {
+        let { error } = await useFetch( "emails", { 
+            baseURL: config.public.apiBase,
+            headers: {
+            Accept: "application/json",
+            Authorization:
+             "Basic " +
+             Buffer.from("admin:admin").toString("base64"),
+                    },
+                method: 'POST',
+                body: {
+                    'title':mailAddress,
+                    'description':des,
+                    '@type': 'Folder'
+                }
+            } );
+    } catch(error) {
+            console.log(error)
+    } finally {
+     console.log('success')
+    }
+
 
 };
+
 </script>
 
 <style lang="scss">
@@ -109,6 +134,8 @@ document.getElementById("msg").innerHTML = "Write your message";
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 border: none;
                 background-color: transparent;
+                cursor: pointer;
+
             }
 
         }

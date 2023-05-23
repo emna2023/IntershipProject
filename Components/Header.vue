@@ -7,7 +7,7 @@
             <li class="header__nav__list__onelist">
                  <NuxtLink class="header__nav__list__onelist__link" to="/"> Accueil</NuxtLink></li>
             <li class="header__nav__list__onelist"> 
-                <NuxtLink class="header__nav__list__onelist__link" to="/apropos"> Apropos</NuxtLink></li>
+                <NuxtLink class="header__nav__list__onelist__link" to="/apropos"> A propos</NuxtLink></li>
             <li class="header__nav__list__onelist">
                 <NuxtLink class="header__nav__list__onelist__link" to="/contact"> Contact</NuxtLink></li>
             <li class="header__nav__list__onelist">

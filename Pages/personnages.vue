@@ -18,10 +18,8 @@
 <script lang="ts" setup>
 
 import {Buffer} from 'buffer';
-
- const config = useRuntimeConfig();
-
- //aller a nuxt.config.ts
+const config = useRuntimeConfig();
+//aller a nuxt.config.ts
  const { data: myData } = await useFetch("personnages", {
    baseURL: config.public.apiBase,
    headers: {
@@ -33,7 +31,6 @@ import {Buffer} from 'buffer';
  });
  console.log("c'est l'api:" + myData.value);
 const personnes = myData.value.items;
-
 </script>
 
 <style scoped lang="scss">
