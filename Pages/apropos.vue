@@ -14,7 +14,7 @@ Aliquam ut tortor suscipit, mattis lorem at, pharetra dui. Ut semper diam augue,
 
 </main>
 </template>
-<script setup>
+<script lang="ts" setup>
 </script>
 <style scoped lang="scss">
 

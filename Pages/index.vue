@@ -4,14 +4,13 @@
 <div class="main__carroussel"> 
         <div class="main__carroussel__container" id="container">
              <div class="main__carroussel__container__img1"></div>
-        <img class="main__carroussel__buttonL" id="img" alt="imgcarrousel" src="/Media/image1.jpg" />
+        <!-- <img class="main__carroussel__buttonL" id="img" alt="imgcarrousel" src="/Media/image1.jpg" /> -->
              <!-- <img class="main__carroussel__container__img1 src=""></div> -->
-
              <!-- <div class="main__carroussel__container__img2"></div> -->
         </div>
 
-        <img class="main__carroussel__buttonL" id="left" alt="bt1" src="../public/Media/arrow_back_ios.png" />
-        <img class="main__carroussel__buttonR" id="right" alt="bt2" src="../public/Media/arrow_forward_ios.png" />
+        <img class="main__carroussel__buttonL" id="left" alt="bt1" src="/Media/arrow_back_ios.png" />
+        <img class="main__carroussel__buttonR" id="right" alt="bt2" src="/Media/arrow_forward_ios.png" />
 
 <!-- //voir ce site pour carrousel https://codepen.io/januaryofmine/pen/wbOqEm -->
 
@@ -23,7 +22,7 @@
         <ul>
 
         <li><div class="main__secondcontainer__imgcontainer">
-            <img class="main__secondcontainer__imgcontainer__img" alt="img1" src="../public/Media/2Chainsaw-Man.jpg" />
+            <img class="main__secondcontainer__imgcontainer__img" alt="img1" src="/Media/2Chainsaw-Man.jpg" />
         </div></li>
         <li>        <h2 class="main__secondcontainer__subtitle2">
                      Chapitres 35-36-37-38-40

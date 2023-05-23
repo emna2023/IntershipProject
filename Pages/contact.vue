@@ -1,14 +1,16 @@
 <template>
    
 <main class="main">
-<!-- <h1 class="main__title">  NOUS CONTACTER</h1> -->
 
-<h1 class="main__title">{{ myData.id }} </h1>
+<!-- <h1 class="main__title">{{ myData.id }} </h1>  -->
+<h1 class="main__title"> Nous contacter </h1>
 
 <div class="main__imgContainer">
-            <!-- <img class="main__imgContainer__img" alt="img1" src="/Media/CONTACTChainsawman.jpg" /> -->
+<!-- <img class="main__imgContainer__img" alt="img1" src="/Media/CONTACTChainsawman.jpg" /> -->
 </div>
+
     <form @submit.prevent="sendEmail" class="main__form" method="post" action="">
+
     <p class="main__form__p">
     <label class="main__form__p__label">   E-mail:   </label> 
     <input class="main__form__p__input"  id="mail"  type="email" name="mail"  size="43"/>
@@ -25,16 +27,12 @@
 
     
 </form>
-
-
-
-
 </main>
 
 </template>
+
 <script lang="ts" setup>
 import {Buffer} from 'buffer';
- 
  const config = useRuntimeConfig();
  //aller a nuxt.config.ts
  const { data: myData } = await useFetch("nous-contacter", {
@@ -46,19 +44,15 @@ import {Buffer} from 'buffer';
        Buffer.from("admin" + ":" + config.apiSecret).toString("base64"),
    },
  });
- console.log(myData.value);
+ console.log("c'est l'api:" + myData.value);
 
 function sendEmail() {
 
 const mailaddress = document.getElementById("mail").value;
 console.log("le mail tapé est" + mailaddress);
 document.getElementById("msg").innerHTML = "Write your message";
- };
 
-
-
-
-
+};
 </script>
 
 <style lang="scss">
@@ -95,10 +89,6 @@ document.getElementById("msg").innerHTML = "Write your message";
                 //position du texte au début du zone de texte ne fonctionne pas
                 //text-align: center;
                 vertical-align:top;
-
-
-                
-
             }
             &__textarea{
                 background-color:  rgb(255, 196, 0);
