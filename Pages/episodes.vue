@@ -2,7 +2,6 @@
     <main class="main">
        
         <!-- <div class="main__container">
-
         <h2 class="main__container__subtitle">épisode 1</h2>
         <h1 class="main__container__title">LE CHIEN ET LA TRONCONNEUSE</h1>
         <div class="main__container__imgContainer">
@@ -69,7 +68,7 @@ import {Buffer} from 'buffer';
  });
  console.log("c'est l'api:" + myData.value);
  const episodes = myData.value.items;
- let id=1;
+ let id = 1;
 
 </script>
 <style scoped lang="scss">

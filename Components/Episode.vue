@@ -52,11 +52,21 @@ const props = defineProps({
         
              &__img{
                 margin-left:30px;
-                width:70%;
+                width:50%;
                 height:150px;
              }
 
             }
     }
+
+
+    @media(max-width:520px)
+{
+    .container
+    {
+        margin-bottom:200px;
+
+}
+}
     
 </style>
