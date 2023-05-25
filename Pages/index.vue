@@ -3,14 +3,11 @@
 
 <div class="main__carroussel"> 
         <div class="main__carroussel__container" id="container">
-             <div class="main__carroussel__container__img1"></div>
-        <!-- <img class="main__carroussel__buttonL" id="img" alt="imgcarrousel" src="/Media/image1.jpg" /> -->
-             <!-- <img class="main__carroussel__container__img1 src=""></div> -->
-             <!-- <div class="main__carroussel__container__img2"></div> -->
+        <div class="main__carroussel__container__img1" id="carrouselBack"></div>
         </div>
 
-        <img class="main__carroussel__buttonL" id="left" alt="bt1" src="/Media/arrow_back_ios.png" />
-        <img class="main__carroussel__buttonR" id="right" alt="bt2" src="/Media/arrow_forward_ios.png" />
+        <img class="main__carroussel__buttonL" @click="left" id="left" alt="bt1" src="/Media/arrow_back_ios.png" />
+        <img class="main__carroussel__buttonR" @click="right" id="right" alt="bt2" src="/Media/arrow_forward_ios.png" />
 
 <!-- //voir ce site pour carrousel https://codepen.io/januaryofmine/pen/wbOqEm -->
 
@@ -35,19 +32,37 @@
 </template>
 <script setup>
 
-// document.getElementById("left").addEventListener((),)
-const carousels = [
-    {
-        img: '/Media/image1.jpg',
-        href: "#"
-    },
-    {
-        img: '/Media/image2.jpg',
-        href: "#"
-    },
-    ];
+let imgNumber=1;
 
+function left() {
+    if(imgNumber>1)
+    {
+        imgNumber--;
+    }
+    else
+    {
+        imgNumber=3;
+    }
+    var carros = document.getElementById('carrouselBack');
+    let newImage = `url(/Media/image${imgNumber}.jpg)`;
+    console.log(newImage);
+    carros.style.backgroundImage = newImage ;
+}
 
+function right() {
+    if (imgNumber>2)
+    {
+        imgNumber=1;
+    }
+    else
+    {
+        imgNumber++;
+    }
+    let carros = document.getElementById('carrouselBack');
+    let newImage = `url(/Media/image${imgNumber}.jpg)`;
+    console.log(newImage);
+    carros.style.backgroundImage = newImage ;
+};
 </script>
 
 <style lang="scss">
@@ -80,9 +95,9 @@ ul{
             width: 100%;
             height: 600px;
             margin:0;
-            display: inline-block;
-             object-fit: cover;
-             background-image: url("/Media/image1.jpg") ;
+            //display: inline-block;
+            object-fit: contain;
+            background-image: url("/Media/image1.jpg") ;
 
         }
         &__img2{

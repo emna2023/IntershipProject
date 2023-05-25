@@ -17,34 +17,10 @@
         :description="oneEpisode.description"
         :url="oneEpisode['@id']" />
 
-        <!-- <div class="main__container">
-        <h2 class="main__container__subtitle2">épisode {{ episodes[1].index }}</h2>
-        <h1 class="main__container__title">{{ episodes[1].title }}</h1>
-        
-        <div class="main__container__imgContainer">
-            <h3 class="main__container__imgContainer__secondTitle">{{ episodes[1].description }}</h3>
-            <img class="main__container__imgContainer__img" alt="img" :src="episodes[1]['@id']"/>
-         </div>
-         
-        </div> -->
-
-
-
-
-        <!-- <div class="main__container">
-        <h2 class="main__container__subtitle2">épisode 2</h2>
-        <h1 class="main__container__title">ARRIVEE A TOKYO</h1>
-        
-        <div class="main__container__imgContainer">
-            <h3 class="main__container__imgContainer__secondTitle">Chapitres 2-3-4-5</h3>
-            <img class="main__container__imgContainer__img" alt="img" src="/Media/Chainsaw-Tokyo.jpg"/>
-         </div>
-
-        </div> -->
-
+       
         <div class="main__arraws">
-            <img alt="arrawBack" src="/Media/arrow_back.png"/>
-            <img alt="arrawNext" src="/Media/arrow_follow.png">
+            <img alt="arrawBack" class="main__arraws__img" src="/Media/arrow_back_ios.png"/>
+            <img alt="arrawNext" class="main__arraws__img" src="/Media/arrow_forward_ios.png">
         </div>
 
       
@@ -116,6 +92,10 @@ import {Buffer} from 'buffer';
         display:flex;
         justify-content: center;
         align-content: space-around;
+        &__img{
+            height: 10%;
+            width: 10%;
+        }
     }
 }
 
